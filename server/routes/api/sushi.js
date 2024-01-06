@@ -8,7 +8,7 @@ router.get("/", ctrl.listSushi);
 router.get("/:sushiId", isValideId, ctrl.getSushiById);
 router.post("/", validateBody(schema.addSchema), ctrl.addSushi);
 router.delete("/:sushiId", isValideId, ctrl.deleteSushi);
-router.put(
+router.patch(
   "/:sushiId",
   isValideId,
   validateBody(schema.updateSchema),
